@@ -1,0 +1,132 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+.footer {
+    background: linear-gradient(5deg, $secondary -214%, $gradient-dark 44.03%);
+    
+    .primary-footer {
+        padding: 40px 20px;
+
+        @include media-breakpoint-up(xl) {
+            padding: 80px 215px;
+        }
+
+        .title {
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-weight: 300;
+            line-height: 28px;
+            margin-bottom: 40px;
+        }
+
+        .footer-badges {
+            @include media-breakpoint-down(xl) {
+                flex-direction: column !important;
+            }
+        }
+
+        .footer-badge {
+            padding: 23px 20px;
+            gap: 15px;
+            width: 100%;
+            height: 88px;
+            background-color: $bg-tertiary;
+            border: 3px solid $quaternary;
+            border-radius: 122px;
+            margin-right: 10px;
+
+            @include media-breakpoint-up(sm) {
+                width: 383px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                gap: 30px;
+                padding: 23px 30px;
+            }
+
+            .hastag-badge {
+                padding: 4px 10px;
+                gap: 10px;
+                height: 36px;
+                background-color: $footer-badge;
+                border-radius: 126px;
+                color: $primary;
+
+                @include media-breakpoint-up(xl) {
+                    padding: 4px 24px;
+                }
+
+                &.active {
+                    background-color: $primary;
+                    color: $footer-badge;
+                    animation: pulse 2s infinite;
+                }
+
+                p {
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 28px;
+
+                    @include media-breakpoint-up(xl) {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            img {
+                max-width: 112px;
+            }
+        }
+    }
+
+    .secondary-footer {
+        padding: 30px 20px;
+        background-color: $bg-primary;
+
+        @include media-breakpoint-up(xl) {
+            padding: 55px 215px;
+        }
+
+        h3 {
+            margin-bottom: 30px;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 34px;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 30px;
+            }
+        }
+
+        .sign-up {
+            .input-group {
+                border: 3px solid $white-border;
+                max-width: 600px;
+
+                .form-control:focus~label {
+                    color: $inputText;
+                }
+            }
+        }
+    }
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	50% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}

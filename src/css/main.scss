@@ -1,0 +1,25 @@
+// Utilities
+@import "utils/variables";
+@import "utils/text";
+@import "utils/forms";
+
+//Bootstrap & Fonts
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+@import url('https://fonts.cdnfonts.com/css/gotham');
+
+//Header styles
+@import "header/navbar";
+@import "header/sections";
+
+//Sections
+@import "sections/sections";
+@import "sections/footer";
+
+body {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 700;
+    background-color: $bg-primary;
+    color: $white;
+}

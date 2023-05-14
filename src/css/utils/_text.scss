@@ -1,0 +1,58 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+h3 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 30px;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 35px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 40px;
+        line-height: 44px;
+    }
+}
+
+.main-title {
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 40px;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 50px;
+        line-height: 54px;
+    }
+}
+
+.section-title {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 30px;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 35px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 40px;
+        line-height: 44px;
+    }
+}
+
+.text-primary {
+    color: $primary !important;
+}
+
+.text-white {
+    color: $white;
+}
